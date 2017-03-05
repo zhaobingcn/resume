@@ -1,0 +1,109 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{tabu}
+\usepackage{multirow}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+% \name{赵\hspace{1em}炳}
+
+% \basicInfo{
+%   \email{zhoabingcn@hotmail.com} \textperiodcentered\ 
+%   \phone{(+86) 18222917001} \textperiodcentered\ 
+%   \linkedin[zhaobing]{https://www.linkedin.com/in/billryan8}}
+
+\basicInfo{
+  \begin{tabu}{ c r r }
+   \multirow{2}{1in}{\name{赵炳}}\hspace{11em} &  &  \\
+    & \email{zhoabingcn@hotmail.com} & \pbar{Java}{0.7} \\
+    Java研发工程师& \phone{(+86) 182-2291-7001} & \pbar{Python}{0.5} \\
+    数据分析工程师& \github[zhaobingcn]{https://github.com/zhaobingcn} & \pbar{Scala}{0.5} \\
+    % & \github[github.com/billryan]{https://github.com/billryan} & \pbar{Javascript}{0.5}
+  \end{tabu}
+}
+ 
+\section{\faGraduationCap\  教育背景}
+\datedsubsection{\textbf{北京邮电大学}，计算机学院，计算机科学与技术}{2015年9月 -- 至今}
+\textit{工学硕士}\ ，预计 2018 年 3 月毕业
+\datedsubsection{\textbf{天津工业大学}，计算机学院， 主修软件工程，辅修英语}{2011年9月 -- 2015年6月}
+\textit{工学文学双学士}\ ，成绩排名：2/244
+
+\section{\faCogs\ IT 技能}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 熟悉常用的数据结构，常用算法和设计模式，并且可以运用到实际工作中。
+  \item 精通Neo4j，TitanDB等非关系型图数据库，著有著作《Neo4j权威指南》，熟悉社交网络分析技能。
+  \item 具备MySQL，MongoDB数据库的开发经验，熟悉数据的检索，查询优化等技能，熟悉Lucene。
+  \item 熟悉Web框架Spring，MVC，MyBatis，Spring Data，RESTful，可以熟练的使用Spring Boot，Maven等搭建开发环境。
+  \item 了解分布式系统，Docker虚拟化技术，可以搭建Spark，Hadoop集群，并且应用到实际项目中去。
+\end{itemize}
+
+\section{\faUsers\ 实习/项目经历}
+\datedsubsection{\faBank \textbf{中国电子科技集团信息科学研究院} ，\faMapMarker 北京}{2016年4月 -- 2017年2月}
+\role{图形大数据项目}{项目研发}
+% 大数据项目开发
+\vspace{-0.7em}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 项目以Neo4j作为数据库(HA集群)，采用Spark作为计算引擎，以MVC模式为项目框架
+  \item 实现了一个科研资料分析管理系统，实时的获取数据(定时爬取数据导入)，并且实时的分析(定时的进行数据分析，以向用户展示最新分析结果)
+  \item 千万级别图数据的算法分析可以在秒级别完成(实测PageRank10M点，120M边迭代五次只需5s)
+\end{itemize}
+\end{onehalfspacing}
+\datedsubsection{\faBank \textbf{中国电子科技集团信息科学研究院} ，\faMapMarker 北京}{2016年4月 -- 2017年2月}
+\role{SpringBoot-GraphProcessing}{前期项目，验证可行性，独自开发}
+\vspace{-0.7em}
+\begin{onehalfspacing}
+% 分布式负载均衡科学上网姿势, https://github.com/cyfdecyf/cow
+% 实时社交网络分析平台，为了验证技术可行性
+\begin{itemize}
+  \item 使用Docker和SpringBoot构建微服务，用Neo4j做存储，Spark Graphx做计算，并且接入TwitterAPI
+  \item 实现了一个可以分析社交网络中节点重要性的系统，使用TwitterAPI抓取数据，使用Spring Data Neo4j管理得到的数据，构建成网络模型，使用Spark GraphX计算并且返回计算结果到Neo4j
+  \item 实现了从社交网络的一个人开始，他的朋友网络之间的关系，影响力等分析
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{\faBank\hspace{0.2em} Neo4j官方中文社区}}{2016 年11月 -- 至今}
+担任Neo4j官方中文社区版主，兼任维护人员(保证网站正常访问，统计流量等)，推广Neo4j
+\begin{onehalfspacing}
+% 优雅的 \LaTeX\ 简历模板, https://github.com/billryan/resume
+\begin{itemize}
+  \item 日常维护Neo4j中文社区，推广Neo4j的应用，解答问题
+  \item 在此期间与Neo4j中国合作伙伴微云数聚一起完成了《Neo4j权威指南》的写作(清华大学出版社，5月份出版，已交稿)
+\end{itemize}
+\end{onehalfspacing}
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+\section{\faStar\ 获奖情况}
+\datedline{\textit{全国二等奖}, 全国大学生数学建模大赛}{2013 年8 月}
+\datedline{\textit{研究生一等奖学金},北京邮电大学}{2015年-2017年}
+\datedline{\textit{校级一等奖学金(每年)，优秀学生(每年)，优秀毕业生},天津工业大学}{2012年-2015年}
+
+\section{\faHeart\ 技术心得}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 个人技术博客\faLink ： http://zhaobing.me
+  \item GitHub\faLink ： https://github.com/zhaobingcn
+  \item 语言: 英语 - 本科阶段辅修英语并获得文学学士学位，六级
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
