@@ -1,51 +1,59 @@
 % !TEX program = xelatex
-
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
 \documentclass{resume}
-%\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
 %\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
-
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{tabu}
+\usepackage{multirow}
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{Bin Yuan}
+% \name{Bin Yuan}
 
 \basicInfo{
-  \email{yuanbin2014@gmail.com} \textperiodcentered\ 
-  \phone{(+86) 131-221-87xxx} \textperiodcentered\ 
-  \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
+  \begin{tabu}{ c r r }
+   \multirow{2}{1in}{\name{Zhao-Bing}}\hspace{6.5em} &  &  \\
+    & \email{zhaobingcn@hotmail.com} & \pbar{Java}{0.8} \\
+    & \phone{(+86) 182-2291-7001} & \pbar{C++}{0.5} \\
+    & \github[github.com/zhaobingcn]{https://github.com/zhaobingcn} & \pbar{Python}{0.5} \\
+    % & \github[github.com/billryan]{https://github.com/billryan} & \pbar{Javascript}{0.5}
+  \end{tabu}
+}
 
 \section{\faGraduationCap\ Education}
-\datedsubsection{\textbf{Shanghai Jiao Tong University (SJTU)}, Shanghai, China}{2013 -- Present}
-\textit{Master student} in Electronics Engineering (EE), expected March 2016
-\datedsubsection{\textbf{Xidian University}, Shaanxi, China}{2009 -- 2013}
-\textit{B.S.} in Electronics Engineering (EE)
+\datedsubsection{\textbf{ Beijing University of Post and Telecommunication (BUPT)}, Beijing, China}{2015 -- Present}
+\textit{Master student} in Computer Science and Technology (CST), expected March 2018
+\datedsubsection{\textbf{Tianjin Polytechnic University (TJPU)}, TianJin, China}{2011 -- 2015}
+\textit{B.S.} in Software Engineering(SE)
 
 \section{\faUsers\ Experience}
-\datedsubsection{\textbf{FLAG Inc.} California, America}{2012 -- Present}
-\role{Summer Intern}{Manager: xxx}
-Brief introduction: xxx.
+\datedsubsection{\textbf{CETC ISA} Beijing, China}{2016.4 -- Present}
+\role{Chinese Knowledge Graph Retrieval System}{Project development}
+Brief introduction:A chinese knowledge graph project, my role is to use Neo4j to generate knowledge graph and accomplish information retrieval.
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+  \item Achieved the storage of 100M entities and 1000M releationships' graph based on Neo4j.
+  \item Used Neo4j, Spark GraphX, Lucene, Spring, Spring MVC, Spring Boot, Hadoop, d3.js, Velocity.
+  \item Achieved real-time data retrieval(delay in less than one second).
+  \item 10M level Graph algorithm analysis can be completed in the second level (PageRank 10M point, 120M side iteration five times only 5s).
 \end{itemize}
 
-\datedsubsection{\textbf{xxx Projects}}{Jan. 2015 -- Present}
-\role{C, Python, Django, Linux}{Individual Projects, collaborated with xxx}
-Brief introduction: xxx
+\datedsubsection{\textbf{BUPT} Beijing, China}{2016.4 -- 2016.8}
+\role{Graph Processing System}{Individual Projects}
+Brief introduction:A pagerank analytics platform using spring boot microservices which combines multiple microservices with a graph processing platform to rank communities of users on Twitter.
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+  \item Developed a system which used Docker and SpringBoot to build micro services, used Neo4j for storage and Spark GraphX for analysis.
+  \item Supports the analytics of a person and its relationship in the social network real-time.
 \end{itemize}
 
-\datedsubsection{\textbf{\LaTeX\ résumé template}}{May. 2015 -- Present}
-\role{\LaTeX, Maintainer}{Individual Projects}
-An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
+\datedsubsection{\textbf{Neo4j Authoritative Guide}}{2016 -- Present} 
+\role{Neo4j Authoritative Guide}{Wrote the "Neo4j Authoritative Guide"}
+Brief introduction:The first chinese book about Neo4j database. 
 \begin{itemize}
-  \item Easy to be further customized or extended
-  \item Full support for unicode characters (e.g. CJK) with \XeLaTeX\
-  \item FontAwesome 4.5.0 support
+  \item Wrote chapter 1 chapter 6 and chapter 8 of the Neo4j Authoritative Guide.
 \end{itemize}
 
 % Reference Test
@@ -57,20 +65,22 @@ An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
 
 \section{\faCogs\ Skills}
 \begin{itemize}[parsep=0.5ex]
-  \item Programming Languages: C == Python > C++ > Java
-  \item Platform: Linux
-  \item Development: Web, xxx
+  \item Programming Languages: Java > Python == C++ == Scala
+  \item Platform: Windows, Linux
+  \item Web Development: Spring, Spring MVC, Mybatis, Spring Data, Restful, Velocity, HTML, CSS
+  \item Database: Mysql, SqlServer, MongoDB, Neo4j, TitanDB
+  \item Distributed System: Docker, Spark, Hadoop
 \end{itemize}
 
 \section{\faHeartO\ Honors and Awards}
-\datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
-\datedline{Other awards}{2015}
+\datedline{\textit{\nth{2} Prize}, China Undergraduate Mathematical Contest in Modeling (CUMCM)}{Sep. 2013}
+\datedline{First Class Scholarship， Outstanding Graduates}{2011-2015}
 
 \section{\faInfo\ Miscellaneous}
 \begin{itemize}[parsep=0.5ex]
-  \item Blog: http://your.blog.me
-  \item GitHub: https://github.com/username
-  \item Languages: English - Fluent, Mandarin - Native speaker
+  \item Blog: http://zhaobing.me
+  \item GitHub: https://github.com/zhaobingcn
+  \item Languages: English - Fluent
 \end{itemize}
 
 %% Reference
